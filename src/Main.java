@@ -12,7 +12,7 @@ public class Main {
 
         int n = Integer.parseInt(br.readLine());
         int p [] = new int [n];
-        int max = -1000000;
+        int max = -100000;
         int index = 0;
         //StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
