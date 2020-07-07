@@ -13,7 +13,7 @@ public class No10818 {
         int n = Integer.parseInt(br.readLine());
         int p [] = new int [n];
         int min = 1000000;
-        int max = -1000000;
+        int max = -1000001;
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
             p[i] = Integer.parseInt(st.nextToken());
