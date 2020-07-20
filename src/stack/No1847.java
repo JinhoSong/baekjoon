@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.Stack;
 
 
-class baekjoon1849 {
-    public void No1849() throws NumberFormatException, IOException {
+class baekjoon1847 {
+    public void No1847() throws NumberFormatException, IOException {
         Stack<Integer> stack = new Stack<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -32,7 +32,8 @@ class baekjoon1849 {
                         sb.append("-\n");
                         stack.pop();
                     }
-                }  //다 push하고나서 input은 pop을 해야 되니까
+                }
+                //다 push하고나서 input은 pop을 해야 되니까
                 //bw.write("-\n");
                 sb.append("-\n");
                 stack.pop();
@@ -54,8 +55,8 @@ class baekjoon1849 {
     }
 }
 
-public class No1849 {
+public class No1847 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        new baekjoon1849().No1849();
+        new baekjoon1847().No1847();
     }
 }
