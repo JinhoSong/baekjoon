@@ -2,8 +2,8 @@ package stack;
 import java.io.*;
 import java.util.Stack;
 
-class baekjoon1849failed {
-    public void No1849failed() throws NumberFormatException, IOException {
+class baekjoon1847failed {
+    public void No1847failed() throws NumberFormatException, IOException {
         Stack<Integer> stack = new Stack<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -45,9 +45,8 @@ class baekjoon1849failed {
         bw.close();
     }
 }
-
-public class No1849failed {
+public class No1847failed {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        new baekjoon1849failed().No1849failed();
+        new baekjoon1847failed().No1847failed();
     }
 }
