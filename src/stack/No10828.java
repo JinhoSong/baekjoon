@@ -1,7 +1,7 @@
 package stack;
 import java.io.*;
 class test {
-    public void asdf()throws NumberFormatException, IOException {
+    public void No10828()throws NumberFormatException, IOException {
         test.Stack<Integer> stack = new test.Stack<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -95,6 +95,6 @@ class test {
 }
 public class No10828 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        new test().asdf();
+        new test().No10828();
     }
 }
