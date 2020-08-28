@@ -1,7 +1,4 @@
 package brute_force;
-
-import com.company.baekjoon;
-
 import java.io.*;
 
 class baekjoon1018 {
