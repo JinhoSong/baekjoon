@@ -1,8 +1,10 @@
 package brute_force;
 
+import com.company.baekjoon;
+
 import java.io.*;
 
-class baekjoon {
+class baekjoon1018 {
     public void No1018() throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -55,6 +57,6 @@ class baekjoon {
 
 public class No1018 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        new baekjoon().No1018();
+        new baekjoon1018().No1018();
     }
 }
