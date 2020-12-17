@@ -1,5 +1,4 @@
-package com.company;
-
+package math;
 import java.io.*;
 
 class baekjoon1929 {
@@ -37,8 +36,9 @@ class baekjoon1929 {
 
 }
 
-public class Main {
+public class No1929 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         new baekjoon1929().No1929();
     }
 }
+
