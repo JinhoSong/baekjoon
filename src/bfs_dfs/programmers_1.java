@@ -1,4 +1,4 @@
-package dfs;
+package bfs_dfs;
 import java.io.*;
 
 class DFS {
