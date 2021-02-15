@@ -8,7 +8,6 @@ class baekjoon1697 {
     public static int[] arr;
     public static boolean[] visit;
     public static int size, count = 0;
-    public static int size_x, size_y;
     public static int number = 0;
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -36,7 +35,7 @@ class baekjoon1697 {
         queue.add(new Node1697(n1, 0));
         visit[n1] = true;
         Node1697 node;
-        int depth = 0;
+        int depth;
         while (!queue.isEmpty()) {
             node = queue.poll();
             int local = node.x;
