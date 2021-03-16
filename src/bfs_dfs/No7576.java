@@ -75,18 +75,18 @@ class baekjoon7576 {
 
 }
 
-class Node {
-    int x;
-    int y;
-    int depth;
-
-    Node(int x, int y, int depth) {
-        this.x = x;
-        this.y = y;
-        this.depth = depth;
-
-    }
-}
+//class Node {
+//    int x;
+//    int y;
+//    int depth;
+//
+//    Node(int x, int y, int depth) {
+//        this.x = x;
+//        this.y = y;
+//        this.depth = depth;
+//
+//    }
+//}
 
 
 

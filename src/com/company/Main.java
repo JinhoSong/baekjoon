@@ -1,44 +1,94 @@
 package com.company;
 
 import java.io.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class baekjoon1929 {
-    public void No1929() throws NumberFormatException, IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+class baekjoon {
+    public static int[][] arr;
+    public static boolean[][] visit;
+    public static int size, count = 0;
+    public static int size_x, size_y;
+    public static int number = 0;
+    public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // 에라토스테네스의 체
-        String numbers [] = br.readLine().split(" ");
-        int start = Integer.parseInt(numbers[0]);
-        int end = Integer.parseInt(numbers[1]);
-        // 정수 두개 사이의 소수를 모두 구한다.
-
-        int answer = 0;
-        int[] number = new int[end + 1];
-        for (int i = 0; i <= end; i++) {
-            number[i] = i;
-            //각 인덱스 값으로 초기화
-        }
-        number[1] = 0; // 0과1은 소수에 포함 안됨
-        for (int i = 2; i <= end; i++) {
-            if (number[i] != 0) { // 처음 발견된 숫자 즉 소수일 경우
-                if(number[i] >=start){
-                    bw.write(number[i]+"\n");
-                }
-                for (int j = 2; j <= (end / i); j++) {
-                    number[i * j] = 0;
-                }
-                answer++;
-            }
-        }
+    public void No() throws NumberFormatException, IOException {
+        int m = 6, n = 4;
+        arr = new int[m][n];
+        //[[1, 1, 1, 0], [1, 2, 2, 0], [1, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 3], [0, 0, 0, 3]]
+        arr[0]= new int[]{1, 1, 1, 0};
+        arr[1]= new int[]{1, 2, 2, 0};
+        arr[2]= new int[]{1, 0, 0, 1};
+        arr[3]= new int[]{0, 0, 0, 1};
+        arr[4]= new int[]{0, 0, 0, 3};
+        arr[5]= new int[]{0, 0, 0, 3};
+        visit = new boolean[m][n];
+        bfs(m,n);
         bw.flush();
         bw.close();
     }
 
+    public void bfs(int m, int n) {
+        int count;
+        int max = 0;
+        int number = 0;
+        visit[0][0] = true;
+        for (int i = 0; i < m; i++) {
+            count=0;
+            for (int j = 0; j < n; j++) {
+                if(!visit[i][j] && arr[i][j] !=0){
+                    int color = arr[i][j];
+                    Queue<Node> queue = new LinkedList<>();
+                    queue.add(new Node(0, 0, color));
+                    Node node;
+                    while (!queue.isEmpty()) {
+                        number++;
+                        int[] nx = {-1, 1, 0, 0};
+                        int[] ny = {0, 0, -1, 1};
+                        node = queue.poll();
+                        for (int k = 0; k < nx.length; k++) {
+                            int dx = nx[k] + node.x;
+                            int dy = ny[k] + node.y;
+                            if (dx >= 0 && dx < m && dy >= 0 && dy < n && !visit[dx][dy] && node.color == arr[dx][dy]) {
+                                // 범위 안에 있고 색깔이 같다고 방문한적 없다면
+                                visit[dx][dy] = true;
+                                queue.add(new Node(dx, dy, arr[dx][dy]));
+                                count++;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            if(count > max ){
+                max=count;
+            }
+        }
+    System.out.println(max);
+    System.out.println(number);
+    }
+
+
 }
+
+class Node {
+    int x;
+    int y;
+    int color;
+
+    public Node(int x, int y, int color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+}
+
 
 public class Main {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        new baekjoon1929().No1929();
+        new baekjoon().No();
     }
+
 }

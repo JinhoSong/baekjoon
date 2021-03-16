@@ -15,6 +15,7 @@ class baekjoon2206 {
 
     public void No2206() throws NumberFormatException, IOException {
         String[] str = br.readLine().split(" ");
+
         size_x = Integer.parseInt(str[0]);
         size_y = Integer.parseInt(str[1]);
         arr = new int[size_x][size_y];
