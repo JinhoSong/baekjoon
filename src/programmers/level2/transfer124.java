@@ -1,8 +1,8 @@
-package com.company;
+package programmers.level2;
 
 import java.io.IOException;
 
-public class Test {
+public class transfer124 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         int number = 2;
@@ -18,8 +18,5 @@ public class Test {
         }
         return answer;
     }
+
 }
-
-
-
-
